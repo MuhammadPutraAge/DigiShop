@@ -74,3 +74,72 @@ main {
     padding: 2rem 8rem;
 }
 
+.heading-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--black-color);
+    margin-bottom: 2rem;
+}
+
+.card-container {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card {
+    text-decoration: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 16px -6px var(--black-color);
+    background-color: var(--white-color);
+    overflow: hidden;
+}
+
+.card-img-container {
+    height: 100%;
+    height: 18rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-details {
+    padding: 1.6rem 2.4rem;
+}
+
+.card-details div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.card-stock {
+    color: var(--black-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.card-price {
+    font-size: 2.4rem;
+    color: var(--black-color);
+    margin-bottom: 1.5rem;
+    margin-top: -0.5rem;
+}
+
+.card-description {
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 400;
+}
+
