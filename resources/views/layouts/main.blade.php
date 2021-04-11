@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-  <title>DigiShop</title>
+  <title>DIGISHOP</title>
 </head>
 <body>
   <header>
     <nav>
-      <a href="/" class="brand-logo"><span>Digi</span>Shop</a>
+      <a href="{{ route('products.index') }}" class="brand-logo"><span>DIGI</span>SHOP</a>
 
       <ul>
         <li>
-          <a href="/" class="menu-item {{ request()->routeIs('products.index') ? 'menu-active' : '' }}">
+          <a href="{{ route('products.index') }}" class="menu-item {{ request()->routeIs('products.index') ? 'menu-active' : '' }}">
             Semua Produk
           </a>
         </li>

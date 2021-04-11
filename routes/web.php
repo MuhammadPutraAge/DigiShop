@@ -10,3 +10,4 @@ Route::post('/add', [ProductController::class, 'create'])->name('products.create
 
 Route::get('/{product}', [ProductController::class, 'show'])->name('products.show');
 Route::put('/{product}', [ProductController::class, 'update'])->name('products.update');
+Route::delete('/{product}', [ProductController::class, 'delete'])->name('products.delete');

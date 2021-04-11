@@ -3,6 +3,17 @@
 @section('content')
     <h1 class="heading-title">Sunting Data Produk</h1>
 
+    <form 
+      class="form-delete" 
+      action="{{ route('products.delete', $product->id) }}" 
+      method="POST" 
+      onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini?')"
+    >
+      @csrf
+      @method('DELETE')
+      <input type="submit" value="Hapus produk" class="form-button-secondary">
+    </form>
+
     <form action="{{ route('products.update', $product->id) }}" method="POST" enctype="multipart/form-data" class="form">
       @csrf
       @method('PUT')
@@ -47,7 +58,6 @@
       </div>
 
       <div class="form-group-button">
-        <button type="submit" class="form-button-secondary">Hapus Produk</button>
         <button type="submit" class="form-button">Sunting Produk</button>
       </div>
 
