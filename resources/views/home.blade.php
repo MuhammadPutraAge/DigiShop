@@ -5,7 +5,7 @@
 
     <div class="card-container">
       @foreach ($products as $product)
-        <a href="#" class="card">
+        <a href="{{ route('products.show', $product->id) }}" class="card">
           <div class="card-img-container">
             <img src="{{ asset('storage/' . $product->image) }}" alt="Product 1" class="card-img">
           </div>

@@ -10,7 +10,7 @@
 <body>
   <header>
     <nav>
-      <h1 class="brand-logo"><span>Digi</span>Shop</h1>
+      <a href="/" class="brand-logo"><span>Digi</span>Shop</a>
 
       <ul>
         <li>
