@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap");
+
+:root {
+    --primary-color: #ce1212;
+    --secondary-color: #810000;
+    --black-color: #1b1717;
+    --white-color: #eeebdd;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Kanit", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--white-color);
+}
+
+/* HEADER */
+header {
+    padding: 2rem 8rem;
+    background-color: var(--black-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.menu-item {
+    color: var(--white-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    color: var(--primary-color);
+}
+
+.brand-logo {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.brand-logo span {
+    color: var(--primary-color);
+}
+
+/* MAIN */
+main {
+    padding: 2rem 8rem;
+}
