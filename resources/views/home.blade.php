@@ -4,73 +4,22 @@
     <h1 class="heading-title">Semua Produk</h1>
 
     <div class="card-container">
-      <a href="#" class="card">
-        <div class="card-img-container">
-          <img src="{{ asset('images/product-1.jpg') }}" alt="Product 1" class="card-img">
-        </div>
-
-        <div class="card-details">
-          <div>
-            <h3 class="card-title">Cool Headphone</h3>
-            <p class="card-stock">Stok: 30</p>
+      @foreach ($products as $product)
+        <a href="#" class="card">
+          <div class="card-img-container">
+            <img src="{{ asset('storage/' . $product->image) }}" alt="Product 1" class="card-img">
           </div>
-          <p class="card-price">Rp. 200.000</p>
-          <p class="card-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab deserunt quasi expedita ad aspernatur quam neque minima placeat dicta incidunt?
-          </p>
-        </div>
-      </a>
 
-      <a href="#" class="card">
-        <div class="card-img-container">
-          <img src="{{ asset('images/product-1.jpg') }}" alt="Product 1" class="card-img">
-        </div>
-
-        <div class="card-details">
-          <div>
-            <h3 class="card-title">Cool Headphone</h3>
-            <p class="card-stock">Stok: 30</p>
+          <div class="card-details">
+            <h3 class="card-title">{{ $product->name }}</h3>
+            <div>
+              <p class="card-price">Rp. {{ number_format($product->price, 0, ',', '.', ) }}</p>
+              <p class="card-stock">Stok: {{ $product->qty }}</p>
+            </div>
+            <p class="card-description">{{ $product->description }}</p>
           </div>
-          <p class="card-price">Rp. 200.000</p>
-          <p class="card-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab deserunt quasi expedita ad aspernatur quam neque minima placeat dicta incidunt?
-          </p>
-        </div>
-      </a>
-
-      <a href="#" class="card">
-        <div class="card-img-container">
-          <img src="{{ asset('images/product-1.jpg') }}" alt="Product 1" class="card-img">
-        </div>
-
-        <div class="card-details">
-          <div>
-            <h3 class="card-title">Cool Headphone</h3>
-            <p class="card-stock">Stok: 30</p>
-          </div>
-          <p class="card-price">Rp. 200.000</p>
-          <p class="card-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab deserunt quasi expedita ad aspernatur quam neque minima placeat dicta incidunt?
-          </p>
-        </div>
-      </a>
-
-      <a href="#" class="card">
-        <div class="card-img-container">
-          <img src="{{ asset('images/product-1.jpg') }}" alt="Product 1" class="card-img">
-        </div>
-
-        <div class="card-details">
-          <div>
-            <h3 class="card-title">Cool Headphone</h3>
-            <p class="card-stock">Stok: 30</p>
-          </div>
-          <p class="card-price">Rp. 200.000</p>
-          <p class="card-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab deserunt quasi expedita ad aspernatur quam neque minima placeat dicta incidunt?
-          </p>
-        </div>
-      </a>
+        </a>          
+      @endforeach
     </div>
   </div>
 @endsection
