@@ -13,8 +13,16 @@
       <h1 class="brand-logo"><span>Digi</span>Shop</h1>
 
       <ul>
-        <li><a href="/" class="menu-item">Semua Produk</a></li>
-        <li><a href="/" class="menu-item">Tambah Produk</a></li>
+        <li>
+          <a href="/" class="menu-item {{ request()->routeIs('products.index') ? 'menu-active' : '' }}">
+            Semua Produk
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('products.add') }}" class="menu-item {{ request()->routeIs('products.add') ? 'menu-active' : '' }}">
+            Tambah Produk
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
